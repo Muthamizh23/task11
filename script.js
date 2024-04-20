@@ -8,18 +8,19 @@ async function api() {
     parent1 = document.querySelector(".row");
     final.forEach((element) => {
       parent1.innerHTML += `
-             <div id="cardDetails" class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-            <div class="card h-100">
-             <div class="card-header">
+             <div id="cardDetails " >
+            <div class="card ">
+             <div class="card-head">
              <h5 class="card-title">${element.name.common}</h5>
             </div><br>
+
             <div class="card-body">  
-            <img src="${element.flags.png}" class="card-img-top">
+            <img src="${element.flags.png}" >
            <div class="card-text">
            <ul class="list-group">
-           <li class="list-group-item card-text"><b>Capital:${element.capital}</li>
-           <li class="list-group-item card-text"><b>Region:${element.region}</li>
-           <li class="list-group-item card-text"><b>Country Code:${element.cca3}</li>
+           <li class="list-group-item "><b>Capital:${element.capital}</li>
+           <li class="list-group-item "><b>Region:${element.region}</li>
+           <li class="list-group-item "><b>Country Code:${element.cca3}</li>
            </ul>
          </div> <br>
     
