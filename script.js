@@ -48,8 +48,8 @@ async function api() {
             let res1 = await res11;
 
             console.log(res1);
-            ele.innerHTML = `<h5>weather: ${res1.weather[0].description}<br>Temp: ${res1.main.temp}<br>Pressure: ${res1.main.pressure}<br>
-              lat:${res1.coord.lon}<br>lon:${res1.coord.lat}</h5>`;
+            ele.innerHTML = `<h6>weather: ${res1.weather[0].description}<br>Temp: ${res1.main.temp}<br>Pressure: ${res1.main.pressure}<br>
+              lat:${res1.coord.lon}<br>lon:${res1.coord.lat}</h6>`;
             console.log(res1.weather[0].description);
             console.log(res1.main.temp);
             console.log(res1.main.pressure);
