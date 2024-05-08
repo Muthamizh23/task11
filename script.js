@@ -8,24 +8,24 @@ async function api() {
     parent1 = document.querySelector(".row");
     final.forEach((element) => {
       parent1.innerHTML += `
-             <div id="cardDetails " >
-            <div class="card ">
-             <div class="card-head">
+             <div id="cardDetails" class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+            <div class="card h-100">
+             <div class="card-header">
              <h5 class="card-title">${element.name.common}</h5>
             </div><br>
-
             <div class="card-body">  
-            <img src="${element.flags.png}" >
+            <img src="${element.flags.png}" class="card-img-top">
            <div class="card-text">
            <ul class="list-group">
-           <li class="list-group-item "><b>Capital:${element.capital}</li>
-           <li class="list-group-item "><b>Region:${element.region}</li>
-           <li class="list-group-item "><b>Country Code:${element.cca3}</li>
-           </ul>
+           <li class="list-group-item card-text"><b>Capital:${element.capital}</li>
+           <li class="list-group-item card-text"><b>Region:${element.region}</li>
+           <li class="list-group-item card-text"><b>Country Code:${element.cca3}</li>
+           
          </div> <br>
     
           
-<button class="btn btn-primary" target="_blank" value="${element.name.common}" id="demo">Click for Weather</button>
+  
+           <button class="btn btn-primary" target="_blank" value="${element.name.common}" id="demo">Click for Weather</button>
            
         
             </div>
@@ -48,8 +48,8 @@ async function api() {
             let res1 = await res11;
 
             console.log(res1);
-            ele.innerHTML = `<h6>weather: ${res1.weather[0].description}<br>Temp: ${res1.main.temp}<br>Pressure: ${res1.main.pressure}<br>
-              lat:${res1.coord.lon}<br>lon:${res1.coord.lat}</h6>`;
+            ele.innerHTML = `<h5>weather: ${res1.weather[0].description}<br>Temp: ${res1.main.temp}<br>Pressure: ${res1.main.pressure}<br>
+              lat:${res1.coord.lon}<br>lon:${res1.coord.lat}</h5>`;
             console.log(res1.weather[0].description);
             console.log(res1.main.temp);
             console.log(res1.main.pressure);
@@ -65,4 +65,3 @@ async function api() {
   }
 }
 api();
-  
